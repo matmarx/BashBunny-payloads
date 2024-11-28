@@ -6,3 +6,6 @@ Bash Bunny is USB attack platform that can mimic USB HID device, Ethernet adapte
 
 ### [BunnyRunExe](/BunnyRunExe)
 Run calc.exe from a Bash Bunny storage. The payload is using standard Windows Run in order to spawn Powershell process with cmd execution of our custom binary. For PoC I am using calc.exe
+
+### [BunnyRunExeBase64](/BunnyRunExeBase64)
+Run calc.exe from a bunny root directory using base64 cradle in order to mitigate QWERTY and QWERTZ layouts
